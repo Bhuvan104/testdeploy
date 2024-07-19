@@ -24,14 +24,14 @@ jobs:
     - name: Checkout bhuvan branch
       run: |
         git fetch origin
-        git checkout mass
+        git checkout main
 
-    - name: Merge develop into bhuvan
+    - name: Merge develop into main
       run: |
-        git merge develop --allow-unrelated-histories
+        git merge develop
 
-    - name: Push changes to bhuvan
+    - name: Push changes to main
       run: |
-        git push origin mass
+        git push origin main
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
